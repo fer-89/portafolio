@@ -48,7 +48,7 @@ a {
 
 .cabecera__titulo {
     font-size: 1.5rem;
-    font-weight: bolder;
+    font-weight: 400;
 }
 
 .navegacion__lista {
@@ -76,12 +76,12 @@ a {
 
 .presentacion__titulo {
     font-size: 2.5rem;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
-.presentacion__subtitulo {
+.presentacion__parrafo {
     font-size: 1rem;
-    font-weight: lighter;
+    font-weight: 300;
     padding: 1rem 0;
 }
 
@@ -103,11 +103,44 @@ a {
     font-weight: bold;
 }
 
-/*------------------------------ Sección de Habilidades ------------------------------*/
+.sobre-mi__texto {
+    font-size: 1rem;
+    font-weight: 300;
+}
 
+/*------------------------------ Sección de Habilidades y Aficiones ------------------------------*/
 
-/*------------------------------ Sección de Aficiones --------------------------------*/
+.habilidades__y__aficiones {
+    padding: 2rem 6rem 2rem 6rem;
+    background-color: var(--color-de-fondo-principal);
+}
 
+.habilidades__y__aficiones__titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.habilidades__y__aficiones__lista {
+    display: flex;
+    justify-content: space-around;
+}
+
+.habilidades__y__aficiones__elemento {
+    background-color: var(--color-de-fondo-menu);
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+}
+
+.habilidades__y__aficiones__icono {
+    max-width: 32px;
+}
 
 /*------------------------------ Sección de Proyectos --------------------------------*/
 
