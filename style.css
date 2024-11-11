@@ -142,8 +142,41 @@ a {
     max-width: 32px;
 }
 
+/*------------------------------ Sección de Formación --------------------------------*/
+
+.formacion {
+    padding: 2rem 6rem 2rem 6rem;
+    background-color: var(--color-de-fondo-secundario);
+}
+
+.formacion__lista {
+    display: flex;
+    justify-content: space-around;
+}
+
+.formacion__titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.formacion__elemento {
+    background-color: var(--color-de-fondo-menu);
+    height: 20rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+}
+
 /*------------------------------ Sección de Proyectos --------------------------------*/
 
+.proyectos {
+    display: flex;
+}
 
 /*------------------------------ Sección de Contacto ---------------------------------*/
 
