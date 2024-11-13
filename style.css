@@ -87,8 +87,13 @@ a {
 
 .redes {
     display: flex;
+    align-items: center;
+    font-weight: 600;
     gap: 1.5rem;
-    font-style: italic;
+}
+
+.redes__arrow {
+    max-width: 0.75rem;
 }
 
 /* ------------------------------ Sección sobre mí ----------------------------------*/
@@ -139,7 +144,7 @@ a {
 }
 
 .habilidades__y__aficiones__icono {
-    max-width: 32px;
+    max-width: 50px;
 }
 
 /*------------------------------ Sección de Formación --------------------------------*/
@@ -164,12 +169,16 @@ a {
 .formacion__elemento {
     background-color: var(--color-de-fondo-menu);
     height: 20rem;
-    width: 20rem;
+    width: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 10%;
+    border-radius: 5%;
+}
+
+.formacion__icono {
+    max-width: 150px;
 }
 
 /*------------------------------ Sección de Proyectos --------------------------------*/
