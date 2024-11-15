@@ -18,7 +18,7 @@
 
 <body>
     <!-- Menú -->
-    <header class="cabecera">
+    <header class="cabecera" id="cabecera">
         <div class="cabecera__contenedor__logo">
             <img class="cabecera__logo" src="assets/music.png" alt="Logo">
             <h1 class="cabecera__titulo">Ever Fernando Jimenez Cossio</h1>
@@ -114,25 +114,45 @@
     <!-- Sección de Proyectos -->
     <section class="proyectos" id="proyectos">
         <h2 class="proyectos__titulo">Experiencia Profesional</h2>
-        <div class="proyectos__contenedor">
-            <h3 class="proyectos__nombre">Título de la Experiencia</h3>
-            <p class="proyectos__descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quisquam unde repudiandae fugiat, earum temporibus!</p>
-        </div>
-        <div class="proyectos__contenedor">
-            <h3 class="proyectos__nombre">Título de la Experiencia</h3>
-            <p class="proyectos__descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quisquam unde repudiandae fugiat, earum temporibus!</p>
-        </div>
+        <ul class="proyectos__lista">
+            <li class="proyectos__elemento">
+                <img class="proyectos__imagen" src="assets/captura_encriptador.png" alt="Encriptador de texto">
+                <div class="proyectos__contenedor">
+                    <h3 class="proyectos__nombre">Encriptador de texto</h3>
+                    <p class="proyectos__descripcion">Challenge encriptador de ONE.</p>
+                    <div class="proyectos__botones__contenedor">
+                        <a class="proyectos__botones" href="https://encriptador-de-texto-gules.vercel.app/">Ver</a>
+                        <a class="proyectos__botones" href="https://github.com/fer-89/encriptador-de-texto">Repositorio</a>
+                    </div>
+                </div>
+            </li>
+            <li class="proyectos__elemento">
+                <img class="proyectos__imagen" src="assets/captura_don.png" alt="DON web page">
+                <div class="proyectos__contenedor">
+                    <h3 class="proyectos__nombre">DON Bolivia</h3>
+                    <p class="proyectos__descripcion">Página web para tienda de instrumentos musicales.</p>
+                    <div class="proyectos__botones__contenedor">
+                        <a class="proyectos__botones" href="www.don-bolivia.com">Ver</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </section>
 
     <!-- Sección de Contacto -->
     <section class="contacto" id="contacto">
-        <h2 class="contacto__titulo">Contacto</h2>
-        <form class="contacto__formulario">
-            <input class="contacto__campo" type="text" placeholder="Nombre">
-            <input class="contacto__campo" type="email" placeholder="Correo Electrónico">
-            <textarea class="contacto__campo contacto__campo--textarea" placeholder="Mensaje"></textarea>
-            <button class="contacto__boton" type="submit">Enviar</button>
-        </form>
+        
+        <div class="contacto__contenedor">
+            <img class="contacto__imagen" src="assets/contact_image.png" alt="Imagen de teléfono">
+            <form class="contacto__formulario">
+                <h2 class="contacto__titulo">Contacto</h2>
+                <p>¿Quieres contactarme? Completa el siguiente formulario y me pondré en contacto contigo lo antes posible.</p>
+                <input class="contacto__campo" type="text" placeholder="Nombre">
+                <input class="contacto__campo" type="email" placeholder="Correo Electrónico">
+                <textarea class="contacto__campo contacto__campo--textarea" placeholder="Mensaje"></textarea>
+                <button class="contacto__boton" type="submit">Enviar mensaje</button>
+            </form>
+        </div>
     </section>
 </body>
     <script src="script.js"></script>

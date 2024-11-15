@@ -3,11 +3,10 @@
 :root {
     --color-de-fondo: #ffffff;
     --color-de-fondo-menu: #ffffff;
-    --color-de-fondo-principal: #F3F3E0;
-    --color-de-fondo-secundario: #CBDCEB;
-    --color-de-fondo-terciario: #133E87;
-    --color-de-fondo-cuaternario: #608BC1;
-    --color-de-link: #000000;
+    --color-de-fondo-principal: #191919;
+    --color-de-fondo-secundario: #33cdcdb9;
+    --color-de-fondo-terciario: #ffffff;
+    --color-de-link: #111111;
 }
 
 body {
@@ -22,12 +21,45 @@ ol, ul, li {
     list-style: none;
 }
 
+button {
+    border: none;
+    font-size: 0.85rem;
+}
+
 a {
     text-decoration: none;
     color: var(--color-de-link);
 }
 
+input {
+    border: solid 1px rgb(227, 227, 227);
+    border-bottom: solid 1.5px rgb(208, 208, 208);
+    border-radius: 5px;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    outline: none;
+}
+
+input:focus {
+    border-bottom: solid 3px var(--color-de-fondo-secundario);
+}
+
+textarea {
+    resize: none;
+    border: solid 1px rgb(227, 227, 227);
+    border-bottom: solid 1.5px rgb(208, 208, 208);
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 1rem 0 0 0.5rem;
+    outline: none;
+}
+
+textarea:focus {
+    border-bottom: solid 3px var(--color-de-fondo-secundario);
+}
+
 /* ------------------------------ Sección Menú -------------------------------*/
+ 
 .cabecera {
     display: flex;
     flex-direction: column;
@@ -64,13 +96,14 @@ a {
 .presentacion {
     display: flex;
     align-items: center;
-    padding: 2rem 6rem 2rem 6rem;
+    padding: 2rem 15rem 2rem 15rem;
     gap: 3rem;
     background-color: var(--color-de-fondo-principal);
+    color: var(--color-de-fondo);
 }
 
 .presentacion__foto {
-    max-width: 360px;
+    max-width: 280px;
     border-radius: 50%;
 }
 
@@ -87,9 +120,12 @@ a {
 
 .redes {
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    border-radius: 5px;
     font-weight: 600;
     gap: 1.5rem;
+    background-color: var(--color-de-fondo);
 }
 
 .redes__arrow {
@@ -101,11 +137,14 @@ a {
 .sobre-mi {
     padding: 2rem 20rem 2rem 20rem;
     background-color: var(--color-de-fondo-secundario);
+    color: var(--color-de-fondo-principal);
 }
 
 .sobre-mi__titulo {
     font-size: 1.5rem;
     font-weight: bold;
+    text-align: center;
+    padding-bottom: 2rem;
 }
 
 .sobre-mi__texto {
@@ -117,7 +156,8 @@ a {
 
 .habilidades__y__aficiones {
     padding: 2rem 6rem 2rem 6rem;
-    background-color: var(--color-de-fondo-principal);
+    background-color: var(--color-de-fondo-terciario);
+    color: var(--color-de-fondo-principal);
 }
 
 .habilidades__y__aficiones__titulo {
@@ -130,10 +170,12 @@ a {
 .habilidades__y__aficiones__lista {
     display: flex;
     justify-content: space-around;
+    color: #000000;
+    padding: 3rem 10rem 3rem 10rem;
 }
 
 .habilidades__y__aficiones__elemento {
-    background-color: var(--color-de-fondo-menu);
+    background-color: var(--color-de-fondo-terciario);
     height: 10rem;
     width: 10rem;
     display: flex;
@@ -141,6 +183,7 @@ a {
     align-items: center;
     justify-content: center;
     border-radius: 10%;
+    border: 1px solid var(--color-de-fondo-principal);
 }
 
 .habilidades__y__aficiones__icono {
@@ -150,8 +193,9 @@ a {
 /*------------------------------ Sección de Formación --------------------------------*/
 
 .formacion {
-    padding: 2rem 6rem 2rem 6rem;
-    background-color: var(--color-de-fondo-secundario);
+    padding: 2rem 10rem 2rem 10rem;
+    background-color: var(--color-de-fondo-principal);
+    color: var(--color-de-fondo-terciario);
 }
 
 .formacion__lista {
@@ -169,12 +213,14 @@ a {
 .formacion__elemento {
     background-color: var(--color-de-fondo-menu);
     height: 20rem;
-    width: 30rem;
+    width: 25rem;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
     border-radius: 5%;
+    color: var(--color-de-fondo-principal);
 }
 
 .formacion__icono {
@@ -184,11 +230,136 @@ a {
 /*------------------------------ Sección de Proyectos --------------------------------*/
 
 .proyectos {
+    padding: 2rem 10rem 2rem 10rem;
+    background-color: var(--color-de-fondo-secundario);
+    color: var(--color-de-fondo-principal);
+}
+
+.proyectos__titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.proyectos__lista {
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.proyectos__elemento:nth-child(odd) {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.proyectos__elemento:nth-child(even) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.proyectos__imagen {
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.proyectos__contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    gap: 2rem;
+}
+
+.proyectos__nombre {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.proyectos__descripcion {
+    font-size: 1rem;
+}
+
+.proyectos__botones__contenedor {
+    display: flex;
+    gap: 2rem;
+}
+
+.proyectos__botones:nth-child(odd) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-de-fondo-terciario);
+    border-radius: 40px;
+    width: 8rem;
+    height: 3rem;
+    color: var(--color-de-fondo-secundario);
+}
+
+.proyectos__botones:nth-child(even) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid var(--color-de-fondo-terciario);
+    width: 8rem;
+    border-radius: 40px;
+    height: 3rem;
+    color: var(--color-de-fondo-terciario);
 }
 
 /*------------------------------ Sección de Contacto ---------------------------------*/
 
+.contacto {
+    padding: 2rem 10rem 2rem 10rem;
+    background-color: var(--color-de-fondo-terciario);
+    color: var(--color-de-fondo-principal);
+}
+
+.contacto__titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+}
+
+.contacto__contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.contacto__imagen {
+    border-radius: 15px;
+}
+
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contacto__campo {
+    width: 100%;
+    height: 4rem;
+    box-sizing: border-box;
+}
+
+.contacto__campo--textarea {
+    height: 10rem;
+}
+
+.contacto__boton {
+    background-color: var(--color-de-fondo-secundario);
+    width: 10rem;
+    height: 3rem;
+    font-size: 1rem;
+    color: var(--color-de-fondo);
+    border-radius: 5px;
+}
 
 /* ------------------------------ Responsividad ---------------------------------------*/
 
@@ -218,8 +389,8 @@ a {
 }
 
 /* Pantallas grandes */
-@media (max-width: 1024px) {
-    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+/* @media (max-width: 1024px) {
+    /* Aquí puedes ajustar aún más el diseño para pantallas grandes 
     .cabecera__logo {
         max-width: 80px;
     }
@@ -227,4 +398,4 @@ a {
     .navegacion__elemento a {
         font-size: 1.1rem;
     }
-}
+} */
