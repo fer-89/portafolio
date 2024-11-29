@@ -66,6 +66,7 @@ textarea:focus {
     align-items: center;
     padding: 2rem 6rem 2rem 6rem;
     background-color: var(--color-de-fondo-menu);
+    box-sizing: border-box;
 }
 
 .cabecera__contenedor__logo {
@@ -96,10 +97,12 @@ textarea:focus {
 .presentacion {
     display: flex;
     align-items: center;
-    padding: 2rem 15rem 2rem 15rem;
+    padding: 2rem 3rem 2rem 3rem;
     gap: 3rem;
     background-color: var(--color-de-fondo-principal);
     color: var(--color-de-fondo);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .presentacion__foto {
@@ -135,9 +138,11 @@ textarea:focus {
 /* ------------------------------ Sección sobre mí ----------------------------------*/
 
 .sobre-mi {
-    padding: 2rem 20rem 2rem 20rem;
+    padding: 2rem 3rem 2rem 3rem;
     background-color: var(--color-de-fondo-secundario);
     color: var(--color-de-fondo-principal);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .sobre-mi__titulo {
@@ -155,9 +160,11 @@ textarea:focus {
 /*------------------------------ Sección de Habilidades y Aficiones ------------------------------*/
 
 .habilidades__y__aficiones {
-    padding: 2rem 6rem 2rem 6rem;
+    padding: 2rem 3rem 2rem 3rem;
     background-color: var(--color-de-fondo-terciario);
     color: var(--color-de-fondo-principal);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .habilidades__y__aficiones__titulo {
@@ -169,15 +176,17 @@ textarea:focus {
 
 .habilidades__y__aficiones__lista {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     color: #000000;
     padding: 3rem 10rem 3rem 10rem;
+    gap: 1rem;
 }
 
 .habilidades__y__aficiones__elemento {
     background-color: var(--color-de-fondo-terciario);
-    height: 10rem;
-    width: 10rem;
+    height: 8rem;
+    width: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -193,9 +202,11 @@ textarea:focus {
 /*------------------------------ Sección de Formación --------------------------------*/
 
 .formacion {
-    padding: 2rem 10rem 2rem 10rem;
+    padding: 2rem 3rem 2rem 3rem;
     background-color: var(--color-de-fondo-principal);
     color: var(--color-de-fondo-terciario);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .formacion__lista {
@@ -230,9 +241,11 @@ textarea:focus {
 /*------------------------------ Sección de Proyectos --------------------------------*/
 
 .proyectos {
-    padding: 2rem 10rem 2rem 10rem;
+    padding: 2rem 3rem 2rem 3rem;
     background-color: var(--color-de-fondo-secundario);
     color: var(--color-de-fondo-principal);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .proyectos__titulo {
@@ -271,7 +284,7 @@ textarea:focus {
 .proyectos__contenedor {
     display: flex;
     flex-direction: column;
-    width: 20rem;
+    /* width: 20rem; */
     gap: 2rem;
 }
 
@@ -315,9 +328,11 @@ textarea:focus {
 /*------------------------------ Sección de Contacto ---------------------------------*/
 
 .contacto {
-    padding: 2rem 10rem 2rem 10rem;
+    padding: 2rem 3rem 2rem 3rem;
     background-color: var(--color-de-fondo-terciario);
     color: var(--color-de-fondo-principal);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contacto__titulo {
@@ -363,8 +378,143 @@ textarea:focus {
 
 /* ------------------------------ Responsividad ---------------------------------------*/
 
-/* Tablets y pantallas más grandes */
-@media (min-width: 768px) {
+/* Móviles */
+@media (max-width: 540px) {
+    .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .cabecera__logo {
+        max-width: 15px;
+    }
+
+    .cabecera__titulo {
+        font-size: 0.75rem;
+    }
+
+    .navegacion__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+        font-size: 0.75rem;
+    }
+
+    .navegacion__elemento:nth-child(1), .navegacion__elemento:nth-child(2), .navegacion__elemento:nth-child(3), .navegacion__elemento:nth-child(4) {
+        display: none;
+    }
+
+    .navegacion__elemento a {
+        font-size: 0.75rem;
+    }
+
+    .presentacion {
+        flex-direction: column;
+    }
+
+    .presentacion__titulo {
+        font-size: 1.5rem;
+    }
+
+    .presentacion__parrafo {
+        font-size: 1rem;
+    }
+
+    .presentacion__foto {
+        max-width: 120px;
+    }
+
+    .redes {
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .habilidades__y__aficiones__lista {
+        padding: 1rem;
+    }
+    .formacion__lista {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    .formacion__elemento {
+        height: 10rem;
+        width: 10rem;
+        border-radius: 10%;
+        padding: 0.5rem;
+    }
+    .formacion__icono {
+        max-width: 80px;
+    }
+    .formacion__nombre {
+        font-size: small;
+        font-weight: bold;
+    }
+    .formacion__detalle {
+        font-size: small;
+    }
+    .proyectos__imagen {
+        max-width: 300px;
+    }
+    .proyectos__elemento:nth-child(even) {
+        flex-direction: column;
+
+    }
+    .proyectos__elemento:nth-child(odd) {
+        flex-direction: column;
+    }
+
+    .contacto__contenedor {
+        flex-direction: column;
+    }
+
+    .contacto__formulario {
+        gap: 1rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 540px) and (max-width: 1200px) {
+    .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 3rem 1.5rem 3rem;
+    }
+
+    .cabecera__logo {
+        max-width: 30px;
+    }
+
+    .cabecera__titulo {
+        font-size: 1rem;
+    }
+
+    .navegacion__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+        font-size: 1rem;
+    }
+
+    .navegacion__elemento:nth-child(1), .navegacion__elemento:nth-child(2), .navegacion__elemento:nth-child(3), .navegacion__elemento:nth-child(4) {
+        display: none;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1rem;
+    }
+
+}
+
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+
     .cabecera {
         flex-direction: row;
         justify-content: space-between;
@@ -384,18 +534,7 @@ textarea:focus {
     }
 
     .navegacion__elemento a {
-        font-size: 1rem;
-    }
-}
-
-/* Pantallas grandes */
-/* @media (max-width: 1024px) {
-    /* Aquí puedes ajustar aún más el diseño para pantallas grandes 
-    .cabecera__logo {
-        max-width: 80px;
-    }
-
-    .navegacion__elemento a {
         font-size: 1.1rem;
     }
-} */
+    
+}
