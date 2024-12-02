@@ -560,5 +560,25 @@ textarea:focus {
     .navegacion__elemento a {
         font-size: 1.1rem;
     }
+
+    .formacion__elemento {
+        height: 10rem;
+        width: 10rem;
+        border-radius: 10%;
+        padding: 0.5rem;
+    }
+
+    .formacion__icono {
+        max-width: 80px;
+    }
+
+    .formacion__nombre {
+        font-size: small;
+        font-weight: bold;
+    }
+
+    .formacion__detalle {
+        font-size: small;
+    }
     
 }
