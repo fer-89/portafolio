@@ -379,7 +379,7 @@ textarea:focus {
 /* ------------------------------ Responsividad ---------------------------------------*/
 
 /* Móviles */
-@media (max-width: 540px) {
+@media (max-width: 480px) {
     .cabecera {
         flex-direction: row;
         justify-content: space-between;
@@ -435,34 +435,41 @@ textarea:focus {
     .habilidades__y__aficiones__lista {
         padding: 1rem;
     }
+
     .formacion__lista {
         flex-direction: column;
         gap: 1rem;
         align-items: center;
     }
+
     .formacion__elemento {
         height: 10rem;
         width: 10rem;
         border-radius: 10%;
         padding: 0.5rem;
     }
+
     .formacion__icono {
         max-width: 80px;
     }
+
     .formacion__nombre {
         font-size: small;
         font-weight: bold;
     }
+
     .formacion__detalle {
         font-size: small;
     }
+
     .proyectos__imagen {
         max-width: 300px;
     }
+
     .proyectos__elemento:nth-child(even) {
         flex-direction: column;
-
     }
+
     .proyectos__elemento:nth-child(odd) {
         flex-direction: column;
     }
@@ -477,7 +484,7 @@ textarea:focus {
 }
 
 /* Tablets */
-@media (min-width: 540px) and (max-width: 1200px) {
+@media (min-width: 480px) and (max-width: 1024px) {
     .cabecera {
         flex-direction: row;
         justify-content: space-between;
@@ -509,10 +516,27 @@ textarea:focus {
         font-size: 1rem;
     }
 
+    .presentacion__foto {
+        max-width: 200px;
+    }
+
+    .presentacion__titulo {
+        font-size: 1.75rem;
+    }
+
+    .presentacion__parrafo {
+        font-size: 1rem;
+    }
+
+    .redes {
+        gap: 0.5rem;
+        width: 100%;
+    }
+
 }
 
 /* Pantallas grandes */
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
 
     .cabecera {
